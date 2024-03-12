@@ -1,0 +1,10 @@
+{
+  "name": "bento-dashboard",
+  "version": "1.0.0",
+  "description": "This project illustrates the advantage of bento design to highlight a lot of useful information on a single page.",
+  "main": "index.js",
+  "repository": "https://github.com/vanotis720/bento-dashboard.git",
+  "author": "vander makadi <vanotis720@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
