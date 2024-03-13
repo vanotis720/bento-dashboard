@@ -164,4 +164,62 @@ window.addEventListener('load', () => {
             }
         });
     })();
+
+
+    // donut
+    (function () {
+        buildChart('#hs-doughnut-chart', () => ({
+            chart: {
+                height: '60%',
+                // width: 230,
+                type: 'donut',
+                zoom: {
+                    enabled: false
+                }
+            },
+            plotOptions: {
+                pie: {
+                    donut: {
+                        size: '50%',
+                    }
+                }
+            },
+            series: [47, 23, 30],
+            labels: ['Tailwind CSS', 'Preline UI', 'Others'],
+            legend: {
+                show: false
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                width: 5
+            },
+            grid: {
+                padding: {
+                    top: -12,
+                    bottom: -11,
+                    left: -12,
+                    right: -12
+                }
+            },
+            states: {
+                hover: {
+                    filter: {
+                        type: 'none'
+                    }
+                }
+            }
+        }), {
+            colors: ['#3b82f6', '#22d3ee', '#e5e7eb'],
+            stroke: {
+                colors: ['rgb(255, 255, 255)']
+            }
+        }, {
+            colors: ['#e5e7eb', '#3b82f6', '#22d3ee'],
+            stroke: {
+                colors: ['rgb(38, 38, 38)']
+            }
+        });
+    })();
 });
