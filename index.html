@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./node_modules/apexcharts/dist/apexcharts.css">
 </head>
 
-<body class="bg-gray-100 p-4">
+<body class="bg-gray-100 p-4 h-full">
     <header>
         <nav class="flex justify-between items-center">
             <a class="bg-white p-2 rounded-full" href="#">
@@ -93,9 +93,9 @@
             </div>
         </div>
     </header>
-    <main class="mt-8">
-        <section class="h-96 grid grid-cols-12 gap-5">
-            <div class="h-full col-span-4 grid grid-rows-2 gap-5">
+    <main class="mt-8 h-screen">
+        <section class="h-1/2 grid grid-cols-12 gap-5">
+            <div class="col-span-4 grid grid-rows-2 gap-5">
                 <div class="bg-white rounded-2xl px-3">
                     <div class="flex justify-between items-center mt-2">
                         <h3 class="font-medium text-xl mt-2">Daily Trends</h3>
@@ -163,6 +163,7 @@
                             </span>
                         </div>
                     </div>
+                    <div id="hs-curved-area-charts"></div>
                 </div>
             </div>
             <div
@@ -204,7 +205,7 @@
                 <div id="hs-single-bar-chart"></div>
             </div>
         </section>
-        <section class="h-80 grid grid-cols-12 gap-8 mt-5">
+        <section class="h-96 grid grid-cols-12 gap-8 mt-5">
             <div class="col-span-4 bg-white rounded-2xl px-3">
                 <div class="flex justify-between items-center mt-2">
                     <h3 class="font-medium text-xl mt-2">Top Products</h3>
