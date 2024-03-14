@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
             series: [
                 {
                     name: 'Sales',
-                    data: [23000, 44000, 55000, 57000, 80000, 61000, 58000, 12500, 60000, 66000, 34000, 78000]
+                    data: [23000, 44000, 55000, 57000, 80000, 161000, 158000, 125000, 50000, 46000, 34000, 25000]
                 }
             ],
             plotOptions: {
@@ -165,8 +165,6 @@ window.addEventListener('load', () => {
         });
     })();
 
-
-    // donut
     (function () {
         buildChart('#hs-doughnut-chart', () => ({
             chart: {
@@ -629,5 +627,107 @@ window.addEventListener('load', () => {
                 borderColor: '#374151'
             }
         });
+    })();
+
+    (function () {
+        buildChart('#hs-radial-chart', (mode) => ({
+            chart: {
+                height: '80%',
+                type: 'radialBar',
+                zoom: {
+                    enabled: false
+                }
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        margin: 15,
+                        size: "30%"
+                    },
+                    dataLabels: {
+                        total: {
+                            show: true,
+                            label: 'TOTAL'
+                        }
+                    }
+                }
+            },
+            series: [67, 84, 97, 61, 185],
+            labels: ['CSS', 'UI', 'HTML', 'JS'],
+        }));
+    })();
+
+    var options = {
+        series: [{
+            data: [21, 22, 10, 28, 16, 21, 13, 30]
+        }],
+        chart: {
+            height: 350,
+            type: 'bar',
+            events: {
+                click: function (chart, w, e) {
+                    // console.log(chart, w, e)
+                }
+            }
+        },
+        colors: colors,
+        plotOptions: {
+            bar: {
+                columnWidth: '45%',
+                distributed: true,
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        legend: {
+            show: false
+        },
+        xaxis: {
+            categories: [
+                ['John', 'Doe'],
+                ['Joe', 'Smith'],
+                ['Jake', 'Williams'],
+                'Amber',
+                ['Peter', 'Brown'],
+                ['Mary', 'Evans'],
+                ['David', 'Wilson'],
+                ['Lily', 'Roberts'],
+            ],
+            labels: {
+                style: {
+                    colors: colors,
+                    fontSize: '12px'
+                }
+            }
+        }
+    };
+
+    (function () {
+        buildChart('#hs-radial-chart', (mode) => ({
+            chart: {
+                height: '80%',
+                type: 'radialBar',
+                zoom: {
+                    enabled: false
+                }
+            },
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        margin: 15,
+                        size: "30%"
+                    },
+                    dataLabels: {
+                        total: {
+                            show: true,
+                            label: 'TOTAL'
+                        }
+                    }
+                }
+            },
+            series: [67, 84, 97, 61, 185],
+            labels: ['CSS', 'UI', 'HTML', 'JS'],
+        }));
     })();
 });
