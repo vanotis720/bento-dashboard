@@ -657,77 +657,26 @@ window.addEventListener('load', () => {
         }));
     })();
 
-    var options = {
-        series: [{
-            data: [21, 22, 10, 28, 16, 21, 13, 30]
-        }],
-        chart: {
-            height: 350,
-            type: 'bar',
-            events: {
-                click: function (chart, w, e) {
-                    // console.log(chart, w, e)
-                }
-            }
-        },
-        colors: colors,
-        plotOptions: {
-            bar: {
-                columnWidth: '45%',
-                distributed: true,
-            }
-        },
-        dataLabels: {
-            enabled: false
-        },
-        legend: {
-            show: false
-        },
-        xaxis: {
-            categories: [
-                ['John', 'Doe'],
-                ['Joe', 'Smith'],
-                ['Jake', 'Williams'],
-                'Amber',
-                ['Peter', 'Brown'],
-                ['Mary', 'Evans'],
-                ['David', 'Wilson'],
-                ['Lily', 'Roberts'],
-            ],
-            labels: {
-                style: {
-                    colors: colors,
-                    fontSize: '12px'
-                }
-            }
-        }
-    };
-
     (function () {
-        buildChart('#hs-radial-chart', (mode) => ({
+        buildChart('#hs-pie-chart', (mode) => ({
             chart: {
-                height: '80%',
-                type: 'radialBar',
-                zoom: {
-                    enabled: false
-                }
+                width: 380,
+                type: 'pie',
             },
-            plotOptions: {
-                radialBar: {
-                    hollow: {
-                        margin: 15,
-                        size: "30%"
+            series: [44, 55, 13, 43, 22],
+            labels: ['HTML', 'CSS', 'JAVASCRIPT', 'JAVA', 'RUST'],
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
                     },
-                    dataLabels: {
-                        total: {
-                            show: true,
-                            label: 'TOTAL'
-                        }
+                    legend: {
+                        position: 'bottom'
                     }
                 }
-            },
-            series: [67, 84, 97, 61, 185],
-            labels: ['CSS', 'UI', 'HTML', 'JS'],
+            }]
         }));
     })();
+
 });
