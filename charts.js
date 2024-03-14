@@ -412,4 +412,222 @@ window.addEventListener('load', () => {
             }
         });
     })();
+
+    (function () {
+        buildChart('#hs-bubble-chart', () => ({
+            chart: {
+                height: '100%',
+                type: 'bubble',
+                toolbar: {
+                    show: false
+                },
+                zoom: {
+                    enabled: false
+                }
+            },
+            series: [
+                { data: [[5, 6, 70]] },
+                { data: [[8, 4, 45]] },
+                { data: [[10, 9, 90]] }
+            ],
+            dataLabels: {
+                style: {
+                    fontSize: '20px',
+                    fontFamily: 'Inter, ui-sans-serif',
+                    fontWeight: '400',
+                    colors: ['#fff', '#1f2937', '#fff']
+                },
+                formatter: (value) => value ? `${value}%` : ''
+            },
+            fill: {
+                opacity: 1
+            },
+            legend: {
+                show: false
+            },
+            stroke: {
+                width: 5
+            },
+            plotOptions: {
+                bubble: {
+                    zScaling: false,
+                    minBubbleRadius: 40
+                }
+            },
+            grid: {
+                show: false,
+                padding: {
+                    top: 0,
+                    bottom: 0,
+                    left: 0,
+                    right: 0
+                }
+            },
+            xaxis: {
+                min: 0,
+                max: 15,
+                labels: {
+                    show: false
+                },
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                }
+            },
+            yaxis: {
+                min: 0,
+                max: 15,
+                labels: {
+                    show: false
+                }
+            },
+            tooltip: {
+                enabled: false
+            },
+            states: {
+                hover: {
+                    filter: {
+                        type: 'none'
+                    }
+                }
+            }
+        }), {
+            colors: ['#22d3ee', '#e5e7eb', '#3b82f6'],
+            markers: {
+                strokeColors: 'rgb(255, 255, 255)'
+            }
+        }, {
+            colors: ['#3b82f6', '#22d3ee', '#e5e7eb'],
+            markers: {
+                strokeColors: 'rgb(38, 38, 38)'
+            }
+        });
+    })();
+
+    (function () {
+        buildChart('#hs-single-line-chart', (mode) => ({
+            chart: {
+                height: '70%',
+                type: 'line',
+                toolbar: {
+                    show: false
+                },
+                zoom: {
+                    enabled: false
+                }
+            },
+            series: [
+                {
+                    name: 'Sales',
+                    data: [0, 27000, 25000, 27000, 40000]
+                }
+            ],
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth',
+                width: [4, 4, 4],
+                dashArray: [0, 0, 4]
+            },
+            title: {
+                show: false
+            },
+            legend: {
+                show: false
+            },
+            grid: {
+                strokeDashArray: 0,
+                borderColor: '#e5e7eb',
+                padding: {
+                    top: -20,
+                    right: 0
+                }
+            },
+            xaxis: {
+                type: 'category',
+                categories: [
+                    '25 January 2023',
+                    '28 January 2023',
+                    '31 January 2023',
+                    '1 February 2023',
+                    '3 February 2023'
+                ],
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                },
+                tooltip: {
+                    enabled: false
+                },
+                labels: {
+                    offsetY: 5,
+                    style: {
+                        colors: '#9ca3af',
+                        fontSize: '13px',
+                        fontFamily: 'Inter, ui-sans-serif',
+                        fontWeight: 400
+                    },
+                    formatter: (title) => {
+                        let t = title;
+
+                        if (t) {
+                            const newT = t.split(' ');
+                            t = `${newT[0]} ${newT[1].slice(0, 3)}`;
+                        }
+
+                        return t;
+                    }
+                }
+            },
+            yaxis: {
+                min: 0,
+                max: 40000,
+                tickAmount: 4,
+                labels: {
+                    align: 'left',
+                    minWidth: 0,
+                    maxWidth: 140,
+                    style: {
+                        colors: '#9ca3af',
+                        fontSize: '12px',
+                        fontFamily: 'Inter, ui-sans-serif',
+                        fontWeight: 400
+                    },
+                    formatter: (value) => value >= 1000 ? `${value / 1000}k` : value
+                }
+            },
+            tooltip: {
+                custom: function (props) {
+                    const { categories } = props.ctx.opts.xaxis;
+                    const { dataPointIndex } = props;
+                    const title = categories[dataPointIndex].split(' ');
+                    const newTitle = `${title[0]} ${title[1]}`;
+
+                    return buildTooltip(props, {
+                        title: newTitle,
+                        mode,
+                        hasTextLabel: true,
+                        wrapperExtClasses: 'min-w-28',
+                        labelDivider: ':',
+                        labelExtClasses: 'ms-2'
+                    });
+                }
+            }
+        }), {
+            colors: ['#2563EB', '#22d3ee', '#d1d5db'],
+            grid: {
+                borderColor: '#e5e7eb'
+            }
+        }, {
+            colors: ['#3b82f6', '#22d3ee', '#6b7280'],
+            grid: {
+                borderColor: '#374151'
+            }
+        });
+    })();
 });
