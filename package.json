@@ -1,27 +1,31 @@
 {
   "name": "bento-dashboard",
   "version": "1.0.0",
-  "description": "This project illustrates the advantage of bento design to highlight a lot of useful information on a single page.",
   "main": "index.js",
+  "description": "This project illustrates the advantage of bento design to highlight a lot of useful information on a single page.",
   "repository": "https://github.com/vanotis720/bento-dashboard.git",
+  "homepage": "https://vanotis720.github.io/bento-dashboard/",
   "author": "vander makadi <vanotis720@gmail.com>",
   "license": "MIT",
   "private": false,
   "type": "module",
   "scripts": {
-    "tail": "npx @tailwindcss/cli@next -i app.css -o dist/app.css --watch",
+    "tail": "npx @tailwindcss/cli@next -i app.css -o public/app.css --watch",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.0-alpha.8",
-    "@tailwindcss/vite": "^4.0.0-alpha.8",
+    "@tailwindcss/vite": "^4.0.0-alpha.9",
     "apexcharts": "^3.47.0",
     "lodash": "^4.17.21",
-    "tailwindcss": "^4.0.0-alpha.8"
+    "tailwindcss": "^4.0.0-alpha.9"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "vite": "^5.1.6"
   }
 }

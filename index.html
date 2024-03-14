@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bento Dashboard</title>
-    <link rel="stylesheet" href="./dist/app.css">
+    <link rel="stylesheet" href="./app.css">
     <link rel="stylesheet" href="./node_modules/apexcharts/dist/apexcharts.css">
 </head>
 
@@ -15,7 +15,7 @@
             <a class="bg-white p-2 rounded-full" href="#">
                 <img class="h-12" src="images/logo.png" alt="logo">
             </a>
-            <ul class="hidden md:grid grid-cols-6 gap-5 bg-white rounded-full">
+            <ul class="hidden lg:grid grid-cols-6 gap-5 bg-white rounded-full">
                 <a class="text-center items-center px-5 py-3" href="">Accueil</a>
                 <a class="text-center items-center px-5 py-3" href="">Produits</a>
                 <a class="bg-black rounded-full text-white text-center items-center py-4" href="">Marchands</a>
@@ -62,19 +62,19 @@
                 </button>
             </div>
         </nav>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-5 my-8 items-center">
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 my-8 items-center">
             <h1 class="col-span-2 text-5xl font-bold">
                 Trade Analytics
             </h1>
-            <div class="col-span-3 md:flex justify-between">
-                <div class="items-center mb-5 md:mb-0">
+            <div class="col-span-3 lg:flex justify-between">
+                <div class="items-center mb-5 lg:mb-0">
                     <span class="text-gray-400 capitalize">Complexity rank 21 of 121</span>
                     <div class="flex items-center">
                         <span class="text-4xl mr-2">1.17</span>
                         <span class="bg-green-500 text-white rounded-full px-2 text-sm">+22%</span>
                     </div>
                 </div>
-                <div class="items-center mb-5 md:mb-0">
+                <div class="items-center mb-5 lg:mb-0">
                     <span class="text-gray-400 capitalize">export rank 36 of 226</span>
                     <div class="flex items-center">
                         <span class="text-gray-500 text-lg">$</span>
@@ -82,7 +82,7 @@
                         <span class="bg-green-500 text-white rounded-full px-2 text-sm">+11%</span>
                     </div>
                 </div>
-                <div class="items-center mb-5 md:mb-0">
+                <div class="items-center mb-5 lg:mb-0">
                     <span class="text-gray-400 capitalize">import rank 6 of 226</span>
                     <div class="flex items-center">
                         <span class="text-gray-500 text-lg">$</span>
@@ -93,9 +93,9 @@
             </div>
         </div>
     </header>
-    <main class="mt-8 md:h-screen">
-        <section class="md:h-1/2 grid grid-cols-1 md:grid-cols-12 gap-5">
-            <div class="md:col-span-4 grid grid-cols-1 md:grid-rows-2 gap-5">
+    <main class="mt-8 lg:h-screen">
+        <section class="lg:h-1/2 grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <div class="lg:col-span-4 grid grid-cols-1 lg:grid-rows-2 gap-5">
                 <div class="bg-white rounded-2xl px-3">
                     <div class="flex justify-between items-center mt-2">
                         <h3 class="font-medium text-xl mt-2">Daily Trends</h3>
@@ -168,7 +168,7 @@
                 </div>
             </div>
             <div
-                class="md:col-span-2 h-96 md:h-auto flex flex-col justify-between items-center pb-5 bg-indigo-100 rounded-2xl bg-cover bg-no-repeat bg-top bg-[url('/images/prince-akachi-bg.png')]">
+                class="lg:col-span-2 h-96 lg:h-auto flex flex-col justify-between items-center pb-5 bg-indigo-100 rounded-2xl bg-cover bg-no-repeat bg-top bg-[url('./images/prince-akachi-bg.png')]">
                 <h3 class="font-medium text-xl mt-2">Assistans</h3>
                 <div class="flex">
                     <span class="bg-white p-4 rounded-full">
@@ -209,7 +209,7 @@
                     </span>
                 </div>
             </div>
-            <div class="md:col-span-6 bg-white rounded-2xl px-5">
+            <div class="lg:col-span-6 bg-white rounded-2xl px-5">
                 <div class="flex justify-between items-center mt-2">
                     <h3 class="font-medium text-xl mt-2">Market Growth</h3>
                     <div class="flex">
@@ -244,8 +244,8 @@
                 <div id="hs-single-bar-chart"></div>
             </div>
         </section>
-        <section class="md:h-96 grid grid-cols-1 md:grid-cols-12 gap-8 mt-5">
-            <div class="hidden md:block col-span-4 bg-white rounded-2xl px-3">
+        <section class="lg:h-96 grid grid-cols-1 lg:grid-cols-12 gap-8 mt-5">
+            <div class="hidden lg:block col-span-4 bg-white rounded-2xl px-3">
                 <div class="flex justify-between items-center mt-2">
                     <h3 class="font-medium text-xl mt-2">Top Products</h3>
                     <div class="flex">
@@ -282,7 +282,7 @@
                     <div id="hs-pie-chart"></div>
                 </div>
             </div>
-            <div class="md:col-span-4 h-96 md:h-auto bg-white rounded-2xl px-3">
+            <div class="lg:col-span-4 h-96 lg:h-auto bg-white rounded-2xl px-3">
                 <div class="flex justify-between items-center mt-2">
                     <h3 class="font-medium text-xl mt-2">Top Category</h3>
                     <div class="flex">
@@ -304,7 +304,7 @@
                     <div id="hs-radial-chart"></div>
                 </div>
             </div>
-            <div class="md:col-span-2 h-96 md:h-auto bg-white rounded-2xl px-3">
+            <div class="lg:col-span-2 h-96 lg:h-auto bg-white rounded-2xl px-3">
                 <div class="flex justify-between items-center mt-2">
                     <h3 class="font-medium text-xl mt-2">Top Imports</h3>
                     <div class="flex">
@@ -326,7 +326,7 @@
                     <div id="hs-bubble-chart"></div>
                 </div>
             </div>
-            <div class="md:col-span-2 h-96 md:h-auto bg-white rounded-2xl px-3">
+            <div class="lg:col-span-2 h-96 lg:h-auto bg-white rounded-2xl px-3">
                 <div class="flex justify-between items-center mt-2">
                     <h3 class="font-medium text-xl mt-2">Top Exports</h3>
                     <div class="flex">
@@ -350,10 +350,7 @@
             </div>
         </section>
     </main>
-    <script src="./node_modules/lodash/lodash.min.js"></script>
-    <script src="./node_modules/apexcharts/dist/apexcharts.min.js"></script>
-    <script src="https://preline.co/assets/js/hs-apexcharts-helpers.js"></script>
-    <script src="charts.js"></script>
+    <script src="charts.js" type="module"></script>
 </body>
 
 </html>
